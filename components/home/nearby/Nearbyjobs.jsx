@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { 
-  View, Text, TouchableOpacity, FlatList, ActivityIndicator 
+  View, Text, TouchableOpacity, ActivityIndicator 
 } from 'react-native';
 import { useRouter } from 'expo-router';
 
