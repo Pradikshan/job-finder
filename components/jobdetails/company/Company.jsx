@@ -5,7 +5,7 @@ import styles from './company.style';
 import { icons } from '../../../constants';
 import { checkImageURL } from '../../../utils';
 
-const Company = () => {
+const Company = ({ companyLogo, jobtitle, companyName, Location }) => {
   return (
     <View>
       <Text>Company</Text>
