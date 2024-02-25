@@ -4,9 +4,11 @@ import {
     Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome
 } from '../components';
 import { Stack, useRouter } from "expo-router";
+import { useState } from "react";
 
 const Home = () => {
     const router = useRouter();
+    const [seractTerm, setSearchTerm] = useState('');
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -31,7 +33,9 @@ const Home = () => {
                         padding: SIZES.medium
                     }}
                 >
-                    <Welcome />
+                    <Welcome 
+
+                    />
 
                     <Popularjobs />
                     <Nearbyjobs />
