@@ -11,7 +11,7 @@ const About = () => {
         <Text style={styles.contextText}>{info}</Text>
       </View>
     </View>
-  )
+  );
 }
 
 export default About;
