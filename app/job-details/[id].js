@@ -67,41 +67,43 @@ const JobDetails = () => {
         />
 
         <>
-        <ScrollView 
-            showsVerticalScrollIndicator={false} 
-            refreshControl={
-            <RefreshControl 
-                refreshing={refreshing} 
-                onRefresh={onRefresh} 
-            />
-            } 
-        >
-            {isLoading ? (
-                <ActivityIndicator size='large' color={COLORS.primary} />
-            ) : error ? (
-                <Text>Something went wrong</Text>
-            ) : data.length === 0 ? (
-                <Text>No data</Text>
-            ) : (
-                <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
-                    <Company 
-                       companyLogo={data[0].employer_logo}
-                       jobtitle={data[0].job_title}
-                       companyName={data[0].employer_name}
-                       Location={data[0].job_country} 
-                    />
+            <ScrollView 
+                showsVerticalScrollIndicator={false} 
+                refreshControl={
+                <RefreshControl 
+                    refreshing={refreshing} 
+                    onRefresh={onRefresh} 
+                />
+                } 
+            >
+                {isLoading ? (
+                    <ActivityIndicator size='large' color={COLORS.primary} />
+                ) : error ? (
+                    <Text>Something went wrong</Text>
+                ) : data.length === 0 ? (
+                    <Text>No data</Text>
+                ) : (
+                    <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
+                        <Company 
+                        companyLogo={data[0].employer_logo}
+                        jobtitle={data[0].job_title}
+                        companyName={data[0].employer_name}
+                        Location={data[0].job_country} 
+                        />
 
-                    <JobTabs 
-                        tabs={tabs}
-                        activeTab={activeTab}
-                        setActiveTab={setActiveTab}
-                    />
+                        <JobTabs 
+                            tabs={tabs}
+                            activeTab={activeTab}
+                            setActiveTab={setActiveTab}
+                        />
 
-                    {displayTabContent()}
+                        {displayTabContent()}
 
-                </View>
-            )}
-        </ScrollView>
+                    </View>
+                )}
+            </ScrollView>
+
+
         </>
 
 
