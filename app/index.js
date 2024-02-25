@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Home = () => {
     const router = useRouter();
-    const [seractTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
