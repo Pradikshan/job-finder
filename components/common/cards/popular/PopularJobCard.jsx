@@ -5,7 +5,7 @@ import styles from './popularjobcard.style'
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
   return (
     <TouchableOpacity
-      style={styles.conatiner(selectedJob, item)}
+      style={styles.container(selectedJob, item)}
       onPress={() => handleCardPress(item)}
     >
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
