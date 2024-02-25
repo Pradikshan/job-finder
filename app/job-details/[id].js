@@ -73,7 +73,9 @@ const JobDetails = () => {
                     />
 
                     <JobTabs 
-
+                        tabs={tabs}
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
                     />
 
                 </View>
