@@ -4,7 +4,11 @@ import styles from './tabs.style';
 import { SIZES } from '../../../constants';
 
 
-
+const TabButton = ({ name, activeTab, onHandleSearchType }) => (
+  <TouchableOpacity>
+    <Text>{ name }</Text>
+  </TouchableOpacity>
+);
 
 const Tabs = ({ tabs, activeTab, setActiveTab }) => {
   return (
@@ -12,7 +16,11 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
       <FlatList 
         data={tabs}
         renderItem={({ item }) => (
-          <TabButton  />
+          <TabButton  
+            name={item}
+            activeTab={activeTab}
+            onHandleSearchType={() => setActiveTab(item)}
+          />
         )}
       />
     </View>
