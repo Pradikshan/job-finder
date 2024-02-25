@@ -4,7 +4,7 @@ import {
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
 
-import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn } from '../../components';
+import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } from '../../components';
 import { COLORS, icons, SIZES } from '../../constants';
 import useFetch from "../../hook/useFetch";
 
