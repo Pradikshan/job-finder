@@ -5,8 +5,11 @@ import { SIZES } from '../../../constants';
 
 
 const TabButton = ({ name, activeTab, onHandleSearchType }) => (
-  <TouchableOpacity>
-    <Text>{ name }</Text>
+  <TouchableOpacity
+    style={styles.btn(name, activeTab)}
+    onPress={onHandleSearchType}
+  >
+    <Text style={styles.btnText(name, activeTab)}>{ name }</Text>
   </TouchableOpacity>
 );
 
