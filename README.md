@@ -1,6 +1,6 @@
 # About the project
 
-This a React Native app designed for searching jobs.
+This a React Native app for searching jobs.
 
 ## Built with:
 
